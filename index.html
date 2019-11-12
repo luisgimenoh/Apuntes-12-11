@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apuntes 12/11</title>
+</head>
+<body>
+        <h2>Formulario básico</h2>
+        <!-- form = Formulario -->
+        <!-- input type=text = Caja de texto -->
+        <form action="ejemplo.php" method="get">
+                <p>Nombre: <input type="text" name="nombre" size="40"></p>
+                <p>Año de nacimiento: <input type="number" name="nacido" min="1900"></p>
+                <p>Sexo:
+                  <input type="radio" name="hm" value="h"> Hombre
+                  <input type="radio" name="hm" value="m"> Mujer
+                </p>
+                <p>
+                  <input type="submit" value="Enviar">
+                  <input type="reset" value="Borrar">
+                </p>
+        </form>
+
+        <!-- Method=GET =  muestra en la URL lo seleccionado, POST no lo muestra -->
+        <form action="ejemplo.php" method="GET">
+
+        </form>
+<!-- -------------------------------------- -->
+        <h2>Required</h2>
+        <!-- REQUIRED, me obliga a completar un campo -->
+        <form action="ejemplo.php" method="get">
+                <p>Nombre: <input type="text" name="nombre" size="40" required></p>
+                <p>Año de nacimiento: <input type="number" name="nacido" min="1900"></p>
+                <p>Sexo:
+                  <input type="radio" name="hm" value="h"> Hombre
+                  <input type="radio" name="hm" value="m"> Mujer
+                </p>
+                <p>
+                  <input type="submit" value="Enviar">
+                  <input type="reset" value="Borrar">
+                </p>
+        </form>
+<!-- --------------------------------- -->
+        <h2>Number(max)</h2>
+        <!-- input type=number Se le puede poner un máximo, con max -->
+        <form action="ejemplo.php" method="GET">
+            <p>Número: <input type="number" max="1999"></p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </p>
+
+        </form>
+<!-- ------------------------------- -->
+        <h2>Botón reset</h2>
+        <form action="ejemplo.php" method="get">
+                <p>Nombre: <input type="text" name="nombre" size="40"></p>
+                <p>Año de nacimiento: <input type="number" name="nacido" min="1900"></p>
+                <p>Sexo:
+                  <input type="radio" name="hm" value="h"> Hombre
+                  <input type="radio" name="hm" value="m"> Mujer
+                </p>
+                <p>
+                  <input type="submit" value="Enviar">
+                  <input type="reset" value="Borrar">
+                </p>
+        </form>
+
+
+<!-- -------------------------------- -->
+        <h2>Javascript</h2>
+
+        <input type="button" onclick="mensaje('Ha pulsado el botón')" value="Botón">
+
+        <!-- El script suele estar fuera del main -->
+        <script>
+          function mensaje(texto) {
+            alert(texto);
+          }
+        </script>
+
+
+
+
+    
+</body>
+</html>
